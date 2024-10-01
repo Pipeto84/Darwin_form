@@ -178,7 +178,8 @@
                         "object": {
                           "flexDirection": "row",
                           "gap": "0px",
-                          "justifyContent": "flex-start"
+                          "justifyContent": "center",
+                          "alignItems": "center"
                         },
                         "string": "    border: 1px solid rgba(128, 128, 128, 0.358);\n    border-radius: 4px;"
                       }
@@ -196,7 +197,7 @@
                           "any": {
                             "object": {
                               "width": "40px",
-                              "height": "34px"
+                              "height": "37px"
                             }
                           }
                         },
@@ -207,28 +208,30 @@
                         }
                       },
                       {
-                        "key": "Cantidad",
-                        "type": "RsLabel",
+                        "key": "cantidad",
+                        "type": "RsNumberFormat",
                         "props": {
-                          "text": {
-                            "value": "0"
+                          "label": {
+                            "value": ""
+                          },
+                          "value": {
+                            "value": 0
+                          },
+                          "allowNegative": {
+                            "value": false
                           }
                         },
                         "css": {
                           "any": {
-                            "object": {
-                              "textAlign": "center",
-                              "fontSize": 16,
-                              "fontWeight": "bold"
-                            },
-                            "string": "    justify-self: center;\n    align-self: flex-start;\n    padding: 6px 10px;\n"
+                            "string": "    font-weight: bold;"
                           }
                         },
                         "wrapperCss": {
                           "any": {
                             "object": {
-                              "width": "53px",
-                              "height": "34px"
+                              "height": "47px",
+                              "marginTop": "6px",
+                              "width": "61px"
                             }
                           }
                         }
@@ -239,13 +242,17 @@
                         "props": {
                           "children": {
                             "value": "-"
+                          },
+                          "disabled": {
+                            "computeType": "function",
+                            "fnSource": "    const {data, errors} = form;\n    console.log(data);\n    return true;"
                           }
                         },
                         "wrapperCss": {
                           "any": {
                             "object": {
                               "width": "40px",
-                              "height": "34px"
+                              "height": "37px"
                             }
                           }
                         },
@@ -260,7 +267,7 @@
                       "any": {
                         "object": {
                           "width": "135px",
-                          "height": "36px",
+                          "height": "38px",
                           "marginBottom": "15px"
                         }
                       }

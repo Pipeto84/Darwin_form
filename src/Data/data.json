@@ -32,7 +32,7 @@
         }
       },
       {
-        "key": "Container_1",
+        "key": "containerMain",
         "type": "RsContainer",
         "props": {},
         "children": [
@@ -97,7 +97,7 @@
             }
           },
           {
-            "key": "Container_2",
+            "key": "containerHorizontal",
             "type": "RsContainer",
             "props": {},
             "css": {
@@ -120,7 +120,7 @@
             },
             "children": [
               {
-                "key": "Cantidades",
+                "key": "amounts",
                 "type": "RsContainer",
                 "props": {},
                 "css": {
@@ -186,7 +186,7 @@
                     },
                     "children": [
                       {
-                        "key": "rsButton1",
+                        "key": "buttonMore",
                         "type": "RsButton",
                         "props": {
                           "children": {
@@ -208,7 +208,7 @@
                         }
                       },
                       {
-                        "key": "cantidad",
+                        "key": "amount",
                         "type": "RsNumberFormat",
                         "props": {
                           "label": {
@@ -237,7 +237,7 @@
                         }
                       },
                       {
-                        "key": "rsButton2",
+                        "key": "buttonLess",
                         "type": "RsButton",
                         "props": {
                           "children": {
@@ -245,7 +245,7 @@
                           },
                           "disabled": {
                             "computeType": "function",
-                            "fnSource": "    const {data, errors} = form;\n    console.log(data);\n    return true;"
+                            "fnSource": "    const {data} = form;\n    return data.amount === 0;"
                           }
                         },
                         "wrapperCss": {
@@ -276,7 +276,7 @@
                 ]
               },
               {
-                "key": "rsDropdown1",
+                "key": "dropdown",
                 "type": "RsDropdown",
                 "props": {
                   "label": {
@@ -303,7 +303,7 @@
                 }
               },
               {
-                "key": "rsDatePicker1",
+                "key": "dateHarvesting",
                 "type": "RsDatePicker",
                 "props": {
                   "label": {
@@ -349,7 +349,7 @@
             ]
           },
           {
-            "key": "Location",
+            "key": "location",
             "type": "RsInput",
             "props": {
               "label": {

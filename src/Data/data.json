@@ -120,7 +120,7 @@
             },
             "children": [
               {
-                "key": "Cantidad",
+                "key": "Cantidades",
                 "type": "RsContainer",
                 "props": {},
                 "css": {
@@ -207,7 +207,7 @@
                         }
                       },
                       {
-                        "key": "rsLabel2",
+                        "key": "Cantidad",
                         "type": "RsLabel",
                         "props": {
                           "text": {

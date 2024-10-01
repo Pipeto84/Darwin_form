@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  rSuiteComponents,
+  rsErrorMessage,
+  rsTooltip,
+  RsLocalizationWrapper,
+  ltrCssLoader,
+  rtlCssLoader,
+} from "@react-form-builder/components-rsuite";
+import { FormBuilder, BuilderView } from "@react-form-builder/designer";
+import { BiDi } from "@react-form-builder/core";
+import data from "./Data/data.json";
+
+const compnentsMetada = rSuiteComponents.map((e) => e.build());
+
+const builderView = new BuilderView(compnentsMetada)
+  .withErrorMeta(rsErrorMessage.build())
+  .withTooltipMeta(rsTooltip.build())
+  .withViewerWrapper(RsLocalizationWrapper)
+  .withCssLoader(BiDi.LTR, ltrCssLoader)
+  .withCssLoader(BiDi.RTL, rtlCssLoader);
+
+const emptyForm = `${JSON.stringify(data)}`;
+
+const formName = "SampleForm";
+
+async function getFormFn(name?: string) {
+  if (name === formName) return emptyForm;
+  throw new Error(`El formulario ${name} no se encontro`);
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormBuilder view={builderView} getForm={getFormFn} formName={formName} />
   );
 }
 

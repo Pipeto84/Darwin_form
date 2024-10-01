@@ -1,0 +1,394 @@
+{
+  "version": "1",
+  "form": {
+    "key": "Screen",
+    "type": "Screen",
+    "props": {},
+    "children": [
+      {
+        "key": "header",
+        "type": "RsHeader",
+        "props": {
+          "content": {
+            "value": "Harvesting Process"
+          },
+          "headerSize": {
+            "value": "h3"
+          }
+        },
+        "css": {
+          "any": {
+            "object": {
+              "backgroundColor": "rgba(255, 144, 18, 1)",
+              "color": "rgba(254, 254, 254, 1)"
+            },
+            "string": "    padding: 20px;\n    border-radius: 8px 8px 0 0;"
+          }
+        },
+        "wrapperCss": {
+          "any": {
+            "object": {}
+          }
+        }
+      },
+      {
+        "key": "Container_1",
+        "type": "RsContainer",
+        "props": {},
+        "children": [
+          {
+            "key": "title",
+            "type": "RsLabel",
+            "props": {
+              "text": {
+                "value": "FDA required fieds"
+              }
+            },
+            "css": {
+              "any": {
+                "string": "    padding: 0 20px;",
+                "object": {
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                }
+              }
+            }
+          },
+          {
+            "key": "products",
+            "type": "RsDropdown",
+            "props": {
+              "label": {
+                "value": "Products"
+              },
+              "data": {
+                "value": [
+                  {
+                    "value": "a",
+                    "label": "Producto 1"
+                  },
+                  {
+                    "value": "b",
+                    "label": "Producto 2"
+                  },
+                  {
+                    "value": "c",
+                    "label": "Producto 3"
+                  }
+                ]
+              },
+              "size": {
+                "value": "md"
+              }
+            },
+            "css": {
+              "any": {
+                "string": "    padding: 0 0 0 15px;\n    font-size: medium;\n    font-weight: bold;"
+              }
+            },
+            "wrapperCss": {
+              "any": {
+                "object": {
+                  "width": "100%",
+                  "marginBottom": "10px",
+                  "marginTop": "10px"
+                }
+              }
+            }
+          },
+          {
+            "key": "Container_2",
+            "type": "RsContainer",
+            "props": {},
+            "css": {
+              "any": {
+                "object": {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "alignItems": "center"
+                },
+                "string": "    "
+              }
+            },
+            "wrapperCss": {
+              "any": {
+                "object": {
+                  "marginLeft": "20px",
+                  "height": "auto"
+                }
+              }
+            },
+            "children": [
+              {
+                "key": "Cantidad",
+                "type": "RsContainer",
+                "props": {},
+                "css": {
+                  "any": {
+                    "object": {
+                      "gap": "10px",
+                      "flexDirection": "row",
+                      "alignItems": "start",
+                      "justifyContent": "flex-start",
+                      "flexWrap": "wrap"
+                    },
+                    "string": "    "
+                  }
+                },
+                "wrapperCss": {
+                  "any": {
+                    "object": {
+                      "width": "140px",
+                      "height": "auto",
+                      "marginBottom": "-4px"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "key": "rsLabel1",
+                    "type": "RsLabel",
+                    "props": {
+                      "text": {
+                        "value": "Product Selection"
+                      }
+                    },
+                    "css": {
+                      "any": {
+                        "object": {
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      }
+                    },
+                    "wrapperCss": {
+                      "any": {
+                        "object": {
+                          "width": "140px"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "key": "Contador",
+                    "type": "RsContainer",
+                    "props": {},
+                    "css": {
+                      "any": {
+                        "object": {
+                          "flexDirection": "row",
+                          "gap": "0px",
+                          "justifyContent": "flex-start"
+                        },
+                        "string": "    border: 1px solid rgba(128, 128, 128, 0.358);\n    border-radius: 4px;"
+                      }
+                    },
+                    "children": [
+                      {
+                        "key": "rsButton1",
+                        "type": "RsButton",
+                        "props": {
+                          "children": {
+                            "value": "+"
+                          }
+                        },
+                        "wrapperCss": {
+                          "any": {
+                            "object": {
+                              "width": "40px",
+                              "height": "34px"
+                            }
+                          }
+                        },
+                        "css": {
+                          "any": {
+                            "string": "    border-radius: 0;\n    font-size: 20px;"
+                          }
+                        }
+                      },
+                      {
+                        "key": "rsLabel2",
+                        "type": "RsLabel",
+                        "props": {
+                          "text": {
+                            "value": "0"
+                          }
+                        },
+                        "css": {
+                          "any": {
+                            "object": {
+                              "textAlign": "center",
+                              "fontSize": 16,
+                              "fontWeight": "bold"
+                            },
+                            "string": "    justify-self: center;\n    align-self: flex-start;\n    padding: 6px 10px;\n"
+                          }
+                        },
+                        "wrapperCss": {
+                          "any": {
+                            "object": {
+                              "width": "53px",
+                              "height": "34px"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "key": "rsButton2",
+                        "type": "RsButton",
+                        "props": {
+                          "children": {
+                            "value": "-"
+                          }
+                        },
+                        "wrapperCss": {
+                          "any": {
+                            "object": {
+                              "width": "40px",
+                              "height": "34px"
+                            }
+                          }
+                        },
+                        "css": {
+                          "any": {
+                            "string": "    border-radius: 0;\n    font-size: 20px;"
+                          }
+                        }
+                      }
+                    ],
+                    "wrapperCss": {
+                      "any": {
+                        "object": {
+                          "width": "135px",
+                          "height": "36px",
+                          "marginBottom": "15px"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "rsDropdown1",
+                "type": "RsDropdown",
+                "props": {
+                  "label": {
+                    "value": ""
+                  },
+                  "placeholder": {
+                    "value": ""
+                  }
+                },
+                "wrapperCss": {
+                  "any": {
+                    "object": {
+                      "width": "150px",
+                      "marginBottom": "7px",
+                      "marginLeft": "10px",
+                      "marginRight": "10px"
+                    }
+                  }
+                },
+                "css": {
+                  "any": {
+                    "string": "    padding-top: 30px;"
+                  }
+                }
+              },
+              {
+                "key": "rsDatePicker1",
+                "type": "RsDatePicker",
+                "props": {
+                  "label": {
+                    "value": "Date of Harvesting"
+                  },
+                  "value": {
+                    "value": "2024-10-01T14:53:41.306Z"
+                  },
+                  "format": {
+                    "value": "dd-MM-yyyy"
+                  },
+                  "appearance": {
+                    "value": "default"
+                  },
+                  "cleanable": {
+                    "value": false
+                  },
+                  "defaultOpen": {
+                    "value": false
+                  },
+                  "isoWeek": {
+                    "value": false
+                  },
+                  "size": {
+                    "value": "md"
+                  }
+                },
+                "css": {
+                  "any": {
+                    "string": "    font-size: 16px;\n    display: flex;\n    gap: 10px;"
+                  }
+                },
+                "wrapperCss": {
+                  "any": {
+                    "object": {
+                      "width": "160px",
+                      "marginBottom": "10px",
+                      "marginRight": "20px"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "key": "Location",
+            "type": "RsInput",
+            "props": {
+              "label": {
+                "value": "Location of growing are"
+              },
+              "size": {
+                "value": "md"
+              }
+            },
+            "css": {
+              "any": {
+                "string": "    font-size: 17px;\n    font-weight: bold;\n    display: flex;\n    gap: 14px;\n    input {\n        font-weight: bold;\n    }"
+              }
+            },
+            "wrapperCss": {
+              "any": {
+                "object": {
+                  "marginLeft": "20px",
+                  "height": "82px",
+                  "marginTop": "20px",
+                  "width": "580px",
+                  "marginRight": "50px"
+                }
+              }
+            }
+          }
+        ],
+        "wrapperCss": {
+          "any": {
+            "object": {
+              "width": "600px"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "localization": {},
+  "languages": [
+    {
+      "code": "en",
+      "dialect": "US",
+      "name": "English",
+      "description": "American English",
+      "bidi": "ltr"
+    }
+  ],
+  "defaultLanguage": "en-US"
+}

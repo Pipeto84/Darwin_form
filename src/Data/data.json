@@ -22,7 +22,8 @@
         "type": "RsHeader",
         "props": {
           "content": {
-            "value": "Harvesting Process"
+            "value": "Harvesting Process",
+            "computeType": "localization"
           },
           "headerSize": {
             "value": "h3"
@@ -53,7 +54,8 @@
             "type": "RsLabel",
             "props": {
               "text": {
-                "value": "FDA required fieds"
+                "value": "FDA required fieds",
+                "computeType": "localization"
               }
             },
             "css": {
@@ -71,7 +73,8 @@
             "type": "RsDropdown",
             "props": {
               "label": {
-                "value": "Products"
+                "value": "Products",
+                "computeType": "localization"
               },
               "data": {
                 "value": [
@@ -91,6 +94,9 @@
               },
               "size": {
                 "value": "md"
+              },
+              "placeholder": {
+                "computeType": "localization"
               }
             },
             "css": {
@@ -112,7 +118,7 @@
                 {
                   "key": "required",
                   "args": {
-                    "message": "Select one product"
+                    "message": "Select a product"
                   }
                 }
               ]
@@ -172,7 +178,8 @@
                     "type": "RsLabel",
                     "props": {
                       "text": {
-                        "value": "Product Selection"
+                        "value": "Product Selection",
+                        "computeType": "localization"
                       }
                     },
                     "css": {
@@ -345,7 +352,8 @@
                 "type": "RsDatePicker",
                 "props": {
                   "label": {
-                    "value": "Date of Harvesting"
+                    "value": "Date of Harvesting",
+                    "computeType": "localization"
                   },
                   "format": {
                     "value": "dd-MM-yyyy"
@@ -392,7 +400,8 @@
             "type": "RsInput",
             "props": {
               "label": {
-                "value": "Location of growing are"
+                "value": "Location of growing are",
+                "computeType": "localization"
               },
               "size": {
                 "value": "md"
@@ -426,13 +435,87 @@
       }
     ]
   },
-  "localization": {},
+  "localization": {
+    "en-US": {
+      "products": {
+        "component": {
+          "label": " Products",
+          "placeholder": " Select"
+        }
+      },
+      "rsLabel1": {
+        "component": {
+          "text": " Product Selection"
+        }
+      },
+      "dateHarvesting": {
+        "component": {
+          "label": " Date of Harvesting"
+        }
+      },
+      "title": {
+        "component": {
+          "text": " FDA required fieds"
+        }
+      },
+      "header": {
+        "component": {
+          "content": " Harvesting Process"
+        }
+      },
+      "location": {
+        "component": {
+          "label": " Location of growing are"
+        }
+      }
+    },
+    "es-ES": {
+      "products": {
+        "component": {
+          "label": " Productos",
+          "placeholder": " Seleccionar"
+        }
+      },
+      "rsLabel1": {
+        "component": {
+          "text": " Selección de productos"
+        }
+      },
+      "dateHarvesting": {
+        "component": {
+          "label": " Fecha de cosecha"
+        }
+      },
+      "title": {
+        "component": {
+          "text": " Campos obligatorios de la FDA"
+        }
+      },
+      "header": {
+        "component": {
+          "content": " Proceso de cosecha"
+        }
+      },
+      "location": {
+        "component": {
+          "label": " Ubicación del área de cultivo"
+        }
+      }
+    }
+  },
   "languages": [
     {
       "code": "en",
       "dialect": "US",
       "name": "English",
       "description": "American English",
+      "bidi": "ltr"
+    },
+    {
+      "code": "es",
+      "dialect": "ES",
+      "name": "Español",
+      "description": "Spanish",
       "bidi": "ltr"
     }
   ],

@@ -1,5 +1,17 @@
 {
   "version": "1",
+  "actions": {
+    "lessOne": {
+      "body": "    e.data.amount -= 1;",
+      "params": {}
+    },
+    "moreOne": {
+      "body": "    e.data.amount += 1;",
+      "params": {}
+    }
+  },
+  "tooltipType": "RsTooltip",
+  "errorType": "RsErrorMessage",
   "form": {
     "key": "Screen",
     "type": "Screen",
@@ -94,6 +106,16 @@
                   "marginTop": "10px"
                 }
               }
+            },
+            "schema": {
+              "validations": [
+                {
+                  "key": "required",
+                  "args": {
+                    "message": "Select one product"
+                  }
+                }
+              ]
             }
           },
           {
@@ -205,6 +227,14 @@
                           "any": {
                             "string": "    border-radius: 0;\n    font-size: 20px;"
                           }
+                        },
+                        "events": {
+                          "onClick": [
+                            {
+                              "name": "moreOne",
+                              "type": "code"
+                            }
+                          ]
                         }
                       },
                       {
@@ -260,6 +290,14 @@
                           "any": {
                             "string": "    border-radius: 0;\n    font-size: 20px;"
                           }
+                        },
+                        "events": {
+                          "onClick": [
+                            {
+                              "name": "lessOne",
+                              "type": "code"
+                            }
+                          ]
                         }
                       }
                     ],
@@ -309,14 +347,8 @@
                   "label": {
                     "value": "Date of Harvesting"
                   },
-                  "value": {
-                    "value": "2024-10-01T14:53:41.306Z"
-                  },
                   "format": {
                     "value": "dd-MM-yyyy"
-                  },
-                  "appearance": {
-                    "value": "default"
                   },
                   "cleanable": {
                     "value": false
@@ -329,6 +361,13 @@
                   },
                   "size": {
                     "value": "md"
+                  },
+                  "appearance": {
+                    "value": "default"
+                  },
+                  "value": {
+                    "computeType": "function",
+                    "fnSource": "    const date = Date.now()\n    const day = new Date(date).getDate()\n    const month = new Date(date).getMonth()\n    const year = new Date(date).getFullYear()\n    return `${year}-${month + 1}-${day}`"
                   }
                 },
                 "css": {

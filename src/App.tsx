@@ -12,10 +12,11 @@ import {
 } from "@react-form-builder/designer";
 import { BiDi } from "@react-form-builder/core";
 import data from "./Data/data.json";
+import { myInput } from './components/MyInput'
 
 const componentsMetada = rSuiteComponents.map((e) => e.build());
 
-const builderView = new BuilderView(componentsMetada)
+const builderView = new BuilderView([...componentsMetada, myInput.build()])
   .withErrorMeta(rsErrorMessage.build())
   .withTooltipMeta(rsTooltip.build())
   .withViewerWrapper(RsLocalizationWrapper)

@@ -375,7 +375,7 @@
                   },
                   "value": {
                     "computeType": "function",
-                    "fnSource": "    const date = Date.now()\n    const day = new Date(date).getDate()\n    const month = new Date(date).getMonth()\n    const year = new Date(date).getFullYear()\n    return `${year}-${month + 1}-${day}`"
+                    "fnSource": "    const date = Date.now()\n    const day = new Date(date).getDate()\n    const month = new Date(date).getMonth()\n    const year = new Date(date).getFullYear()\n    return `${year}-${month + 1}-${day + 1}`"
                   }
                 },
                 "css": {

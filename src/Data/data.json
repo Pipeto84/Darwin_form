@@ -1,164 +1,141 @@
 {
-  "version": "1",
-  "actions": {
-    "lessOne": {
-      "body": "    e.data.amount -= 1;",
-      "params": {}
-    },
-    "moreOne": {
-      "body": "    e.data.amount += 1;",
-      "params": {}
-    }
-  },
-  "tooltipType": "RsTooltip",
-  "errorType": "RsErrorMessage",
-  "form": {
-    "key": "Screen",
-    "type": "Screen",
-    "props": {},
-    "children": [
-      {
-        "key": "header",
-        "type": "RsHeader",
-        "props": {
-          "content": {
-            "value": "Harvesting Process",
-            "computeType": "localization"
-          },
-          "headerSize": {
-            "value": "h3"
-          }
+  "forms": [
+    {
+      "version": "1",
+      "actions": {
+        "lessOne": {
+          "body": "    e.data.amount -= 1;",
+          "params": {}
         },
-        "css": {
-          "any": {
-            "object": {
-              "backgroundColor": "rgba(255, 144, 18, 1)",
-              "color": "rgba(254, 254, 254, 1)"
-            },
-            "string": "    padding: 20px;\n    border-radius: 8px 8px 0 0;"
-          }
-        },
-        "wrapperCss": {
-          "any": {
-            "object": {}
-          }
+        "moreOne": {
+          "body": "    e.data.amount += 1;",
+          "params": {}
         }
       },
-      {
-        "key": "containerMain",
-        "type": "RsContainer",
+      "tooltipType": "RsTooltip",
+      "errorType": "RsErrorMessage",
+      "form": {
+        "key": "Screen",
+        "type": "Screen",
         "props": {},
         "children": [
           {
-            "key": "title",
-            "type": "RsLabel",
+            "key": "header",
+            "type": "RsHeader",
             "props": {
-              "text": {
-                "value": "FDA required fieds",
+              "content": {
+                "value": "Harvesting Process",
                 "computeType": "localization"
+              },
+              "headerSize": {
+                "value": "h3"
               }
             },
             "css": {
               "any": {
-                "string": "    padding: 0 20px;",
                 "object": {
-                  "fontSize": 18,
-                  "fontWeight": "bold"
-                }
-              }
-            }
-          },
-          {
-            "key": "products",
-            "type": "RsDropdown",
-            "props": {
-              "label": {
-                "value": "Products",
-                "computeType": "localization"
-              },
-              "data": {
-                "value": [
-                  {
-                    "value": "a",
-                    "label": "Producto 1"
-                  },
-                  {
-                    "value": "b",
-                    "label": "Producto 2"
-                  },
-                  {
-                    "value": "c",
-                    "label": "Producto 3"
-                  }
-                ]
-              },
-              "size": {
-                "value": "md"
-              },
-              "placeholder": {
-                "computeType": "localization"
-              }
-            },
-            "css": {
-              "any": {
-                "string": "    padding: 0 0 0 15px;\n    font-size: medium;\n    font-weight: bold;"
+                  "backgroundColor": "rgba(255, 144, 18, 1)",
+                  "color": "rgba(254, 254, 254, 1)"
+                },
+                "string": "    padding: 20px;\n    border-radius: 8px 8px 0 0;"
               }
             },
             "wrapperCss": {
               "any": {
-                "object": {
-                  "width": "100%",
-                  "marginBottom": "10px",
-                  "marginTop": "10px"
-                }
+                "object": {}
               }
-            },
-            "schema": {
-              "validations": [
-                {
-                  "key": "required",
-                  "args": {
-                    "message": "Select a product"
-                  }
-                }
-              ]
             }
           },
           {
-            "key": "containerHorizontal",
+            "key": "containerMain",
             "type": "RsContainer",
             "props": {},
-            "css": {
-              "any": {
-                "object": {
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "alignItems": "center"
-                },
-                "string": "    "
-              }
-            },
-            "wrapperCss": {
-              "any": {
-                "object": {
-                  "marginLeft": "20px",
-                  "height": "auto"
-                }
-              }
-            },
             "children": [
               {
-                "key": "amounts",
+                "key": "title",
+                "type": "RsLabel",
+                "props": {
+                  "text": {
+                    "value": "FDA required fieds",
+                    "computeType": "localization"
+                  }
+                },
+                "css": {
+                  "any": {
+                    "string": "    padding: 0 20px;",
+                    "object": {
+                      "fontSize": 18,
+                      "fontWeight": "bold"
+                    }
+                  }
+                }
+              },
+              {
+                "key": "products",
+                "type": "RsDropdown",
+                "props": {
+                  "label": {
+                    "value": "Products",
+                    "computeType": "localization"
+                  },
+                  "data": {
+                    "value": [
+                      {
+                        "value": "a",
+                        "label": "Producto 1"
+                      },
+                      {
+                        "value": "b",
+                        "label": "Producto 2"
+                      },
+                      {
+                        "value": "c",
+                        "label": "Producto 3"
+                      }
+                    ]
+                  },
+                  "size": {
+                    "value": "md"
+                  },
+                  "placeholder": {
+                    "computeType": "localization"
+                  }
+                },
+                "css": {
+                  "any": {
+                    "string": "    padding: 0 0 0 15px;\n    font-size: medium;\n    font-weight: bold;"
+                  }
+                },
+                "wrapperCss": {
+                  "any": {
+                    "object": {
+                      "width": "100%",
+                      "marginBottom": "10px",
+                      "marginTop": "10px"
+                    }
+                  }
+                },
+                "schema": {
+                  "validations": [
+                    {
+                      "key": "required",
+                      "args": {
+                        "message": "Select a product"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "containerHorizontal",
                 "type": "RsContainer",
                 "props": {},
                 "css": {
                   "any": {
                     "object": {
-                      "gap": "10px",
                       "flexDirection": "row",
-                      "alignItems": "start",
-                      "justifyContent": "flex-start",
-                      "flexWrap": "wrap"
+                      "justifyContent": "space-between",
+                      "alignItems": "center"
                     },
                     "string": "    "
                   }
@@ -166,154 +143,254 @@
                 "wrapperCss": {
                   "any": {
                     "object": {
-                      "width": "140px",
-                      "height": "auto",
-                      "marginBottom": "-4px"
+                      "marginLeft": "20px",
+                      "height": "auto"
                     }
                   }
                 },
                 "children": [
                   {
-                    "key": "rsLabel1",
-                    "type": "RsLabel",
-                    "props": {
-                      "text": {
-                        "value": "Product Selection",
-                        "computeType": "localization"
-                      }
-                    },
-                    "css": {
-                      "any": {
-                        "object": {
-                          "fontSize": 16,
-                          "fontWeight": "normal"
-                        }
-                      }
-                    },
-                    "wrapperCss": {
-                      "any": {
-                        "object": {
-                          "width": "140px"
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "key": "Contador",
+                    "key": "amounts",
                     "type": "RsContainer",
                     "props": {},
                     "css": {
                       "any": {
                         "object": {
+                          "gap": "10px",
                           "flexDirection": "row",
-                          "gap": "0px",
-                          "justifyContent": "center",
-                          "alignItems": "center"
+                          "alignItems": "start",
+                          "justifyContent": "flex-start",
+                          "flexWrap": "wrap"
                         },
-                        "string": "    border: 1px solid rgba(128, 128, 128, 0.358);\n    border-radius: 4px;"
+                        "string": "    "
+                      }
+                    },
+                    "wrapperCss": {
+                      "any": {
+                        "object": {
+                          "width": "140px",
+                          "height": "auto",
+                          "marginBottom": "-4px"
+                        }
                       }
                     },
                     "children": [
                       {
-                        "key": "buttonMore",
-                        "type": "RsButton",
+                        "key": "rsLabel1",
+                        "type": "RsLabel",
                         "props": {
-                          "children": {
-                            "value": "+"
+                          "text": {
+                            "value": "Product Selection",
+                            "computeType": "localization"
+                          }
+                        },
+                        "css": {
+                          "any": {
+                            "object": {
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
                           }
                         },
                         "wrapperCss": {
                           "any": {
                             "object": {
-                              "width": "40px",
-                              "height": "37px"
-                            }
-                          }
-                        },
-                        "css": {
-                          "any": {
-                            "string": "    border-radius: 0;\n    font-size: 20px;"
-                          }
-                        },
-                        "events": {
-                          "onClick": [
-                            {
-                              "name": "moreOne",
-                              "type": "code"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "key": "amount",
-                        "type": "RsNumberFormat",
-                        "props": {
-                          "label": {
-                            "value": ""
-                          },
-                          "value": {
-                            "value": 0
-                          },
-                          "allowNegative": {
-                            "value": false
-                          }
-                        },
-                        "css": {
-                          "any": {
-                            "string": "    font-weight: bold;"
-                          }
-                        },
-                        "wrapperCss": {
-                          "any": {
-                            "object": {
-                              "height": "47px",
-                              "marginTop": "6px",
-                              "width": "61px"
+                              "width": "140px"
                             }
                           }
                         }
                       },
                       {
-                        "key": "buttonLess",
-                        "type": "RsButton",
-                        "props": {
-                          "children": {
-                            "value": "-"
-                          },
-                          "disabled": {
-                            "computeType": "function",
-                            "fnSource": "    const {data} = form;\n    return data.amount === 0;"
+                        "key": "Contador",
+                        "type": "RsContainer",
+                        "props": {},
+                        "css": {
+                          "any": {
+                            "object": {
+                              "flexDirection": "row",
+                              "gap": "0px",
+                              "justifyContent": "center",
+                              "alignItems": "center"
+                            },
+                            "string": "    border: 1px solid rgba(128, 128, 128, 0.358);\n    border-radius: 4px;"
                           }
                         },
+                        "children": [
+                          {
+                            "key": "buttonMore",
+                            "type": "RsButton",
+                            "props": {
+                              "children": {
+                                "value": "+"
+                              }
+                            },
+                            "wrapperCss": {
+                              "any": {
+                                "object": {
+                                  "width": "40px",
+                                  "height": "37px"
+                                }
+                              }
+                            },
+                            "css": {
+                              "any": {
+                                "string": "    border-radius: 0;\n    font-size: 20px;"
+                              }
+                            },
+                            "events": {
+                              "onClick": [
+                                {
+                                  "name": "moreOne",
+                                  "type": "code"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "key": "amount",
+                            "type": "RsNumberFormat",
+                            "props": {
+                              "label": {
+                                "value": ""
+                              },
+                              "value": {
+                                "value": 0
+                              },
+                              "allowNegative": {
+                                "value": false
+                              }
+                            },
+                            "css": {
+                              "any": {
+                                "string": "    font-weight: bold;"
+                              }
+                            },
+                            "wrapperCss": {
+                              "any": {
+                                "object": {
+                                  "height": "47px",
+                                  "marginTop": "6px",
+                                  "width": "61px"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "key": "buttonLess",
+                            "type": "RsButton",
+                            "props": {
+                              "children": {
+                                "value": "-"
+                              },
+                              "disabled": {
+                                "computeType": "function",
+                                "fnSource": "    const {data} = form;\n    return data.amount === 0;"
+                              }
+                            },
+                            "wrapperCss": {
+                              "any": {
+                                "object": {
+                                  "width": "40px",
+                                  "height": "37px"
+                                }
+                              }
+                            },
+                            "css": {
+                              "any": {
+                                "string": "    border-radius: 0;\n    font-size: 20px;"
+                              }
+                            },
+                            "events": {
+                              "onClick": [
+                                {
+                                  "name": "lessOne",
+                                  "type": "code"
+                                }
+                              ]
+                            }
+                          }
+                        ],
                         "wrapperCss": {
                           "any": {
                             "object": {
-                              "width": "40px",
-                              "height": "37px"
+                              "width": "135px",
+                              "height": "38px",
+                              "marginBottom": "15px"
                             }
                           }
-                        },
-                        "css": {
-                          "any": {
-                            "string": "    border-radius: 0;\n    font-size: 20px;"
-                          }
-                        },
-                        "events": {
-                          "onClick": [
-                            {
-                              "name": "lessOne",
-                              "type": "code"
-                            }
-                          ]
                         }
                       }
-                    ],
+                    ]
+                  },
+                  {
+                    "key": "dropdown",
+                    "type": "RsDropdown",
+                    "props": {
+                      "label": {
+                        "value": ""
+                      },
+                      "placeholder": {
+                        "value": ""
+                      }
+                    },
                     "wrapperCss": {
                       "any": {
                         "object": {
-                          "width": "135px",
-                          "height": "38px",
-                          "marginBottom": "15px"
+                          "width": "150px",
+                          "marginBottom": "7px",
+                          "marginLeft": "10px",
+                          "marginRight": "10px"
+                        }
+                      }
+                    },
+                    "css": {
+                      "any": {
+                        "string": "    padding-top: 30px;"
+                      }
+                    }
+                  },
+                  {
+                    "key": "dateHarvesting",
+                    "type": "RsDatePicker",
+                    "props": {
+                      "label": {
+                        "value": "Date of Harvesting",
+                        "computeType": "localization"
+                      },
+                      "format": {
+                        "value": "dd-MM-yyyy"
+                      },
+                      "cleanable": {
+                        "value": false
+                      },
+                      "defaultOpen": {
+                        "value": false
+                      },
+                      "isoWeek": {
+                        "value": false
+                      },
+                      "size": {
+                        "value": "md"
+                      },
+                      "appearance": {
+                        "value": "default"
+                      },
+                      "value": {
+                        "computeType": "function",
+                        "fnSource": "    const date = Date.now()\n    const day = new Date(date).getDate()\n    const month = new Date(date).getMonth()\n    const year = new Date(date).getFullYear()\n    return `${year}-${month + 1}-${day + 1}`"
+                      }
+                    },
+                    "css": {
+                      "any": {
+                        "string": "    font-size: 16px;\n    display: flex;\n    gap: 10px;"
+                      }
+                    },
+                    "wrapperCss": {
+                      "any": {
+                        "object": {
+                          "width": "160px",
+                          "marginBottom": "10px",
+                          "marginRight": "20px"
                         }
                       }
                     }
@@ -321,203 +398,149 @@
                 ]
               },
               {
-                "key": "dropdown",
-                "type": "RsDropdown",
+                "key": "location",
+                "type": "RsInput",
                 "props": {
                   "label": {
-                    "value": ""
-                  },
-                  "placeholder": {
-                    "value": ""
-                  }
-                },
-                "wrapperCss": {
-                  "any": {
-                    "object": {
-                      "width": "150px",
-                      "marginBottom": "7px",
-                      "marginLeft": "10px",
-                      "marginRight": "10px"
-                    }
-                  }
-                },
-                "css": {
-                  "any": {
-                    "string": "    padding-top: 30px;"
-                  }
-                }
-              },
-              {
-                "key": "dateHarvesting",
-                "type": "RsDatePicker",
-                "props": {
-                  "label": {
-                    "value": "Date of Harvesting",
+                    "value": "Location of growing are",
                     "computeType": "localization"
-                  },
-                  "format": {
-                    "value": "dd-MM-yyyy"
-                  },
-                  "cleanable": {
-                    "value": false
-                  },
-                  "defaultOpen": {
-                    "value": false
-                  },
-                  "isoWeek": {
-                    "value": false
                   },
                   "size": {
                     "value": "md"
-                  },
-                  "appearance": {
-                    "value": "default"
-                  },
-                  "value": {
-                    "computeType": "function",
-                    "fnSource": "    const date = Date.now()\n    const day = new Date(date).getDate()\n    const month = new Date(date).getMonth()\n    const year = new Date(date).getFullYear()\n    return `${year}-${month + 1}-${day + 1}`"
                   }
                 },
                 "css": {
                   "any": {
-                    "string": "    font-size: 16px;\n    display: flex;\n    gap: 10px;"
+                    "string": "    font-size: 17px;\n    font-weight: bold;\n    display: flex;\n    gap: 14px;\n    input {\n        font-weight: bold;\n    }"
                   }
                 },
                 "wrapperCss": {
                   "any": {
                     "object": {
-                      "width": "160px",
-                      "marginBottom": "10px",
-                      "marginRight": "20px"
+                      "marginLeft": "20px",
+                      "height": "82px",
+                      "marginTop": "20px",
+                      "width": "580px",
+                      "marginRight": "50px"
                     }
                   }
                 }
               }
-            ]
-          },
-          {
-            "key": "location",
-            "type": "RsInput",
-            "props": {
-              "label": {
-                "value": "Location of growing are",
-                "computeType": "localization"
-              },
-              "size": {
-                "value": "md"
-              }
-            },
-            "css": {
-              "any": {
-                "string": "    font-size: 17px;\n    font-weight: bold;\n    display: flex;\n    gap: 14px;\n    input {\n        font-weight: bold;\n    }"
-              }
-            },
+            ],
             "wrapperCss": {
               "any": {
                 "object": {
-                  "marginLeft": "20px",
-                  "height": "82px",
-                  "marginTop": "20px",
-                  "width": "580px",
-                  "marginRight": "50px"
+                  "width": "600px"
                 }
               }
             }
           }
-        ],
-        "wrapperCss": {
-          "any": {
-            "object": {
-              "width": "600px"
+        ]
+      },
+      "localization": {
+        "en-US": {
+          "products": {
+            "component": {
+              "label": " Products",
+              "placeholder": " Select"
+            }
+          },
+          "rsLabel1": {
+            "component": {
+              "text": " Product Selection"
+            }
+          },
+          "dateHarvesting": {
+            "component": {
+              "label": " Date of Harvesting"
+            }
+          },
+          "title": {
+            "component": {
+              "text": " FDA required fieds"
+            }
+          },
+          "header": {
+            "component": {
+              "content": " Harvesting Process"
+            }
+          },
+          "location": {
+            "component": {
+              "label": " Location of growing are"
+            }
+          }
+        },
+        "es-ES": {
+          "products": {
+            "component": {
+              "label": " Productos",
+              "placeholder": " Seleccionar"
+            }
+          },
+          "rsLabel1": {
+            "component": {
+              "text": " Selección de productos"
+            }
+          },
+          "dateHarvesting": {
+            "component": {
+              "label": " Fecha de cosecha"
+            }
+          },
+          "title": {
+            "component": {
+              "text": " Campos obligatorios de la FDA"
+            }
+          },
+          "header": {
+            "component": {
+              "content": " Proceso de cosecha"
+            }
+          },
+          "location": {
+            "component": {
+              "label": " Ubicación del área de cultivo"
             }
           }
         }
-      }
-    ]
-  },
-  "localization": {
-    "en-US": {
-      "products": {
-        "component": {
-          "label": " Products",
-          "placeholder": " Select"
-        }
       },
-      "rsLabel1": {
-        "component": {
-          "text": " Product Selection"
+      "languages": [
+        {
+          "code": "en",
+          "dialect": "US",
+          "name": "English",
+          "description": "American English",
+          "bidi": "ltr"
+        },
+        {
+          "code": "es",
+          "dialect": "ES",
+          "name": "Español",
+          "description": "Spanish",
+          "bidi": "ltr"
         }
-      },
-      "dateHarvesting": {
-        "component": {
-          "label": " Date of Harvesting"
-        }
-      },
-      "title": {
-        "component": {
-          "text": " FDA required fieds"
-        }
-      },
-      "header": {
-        "component": {
-          "content": " Harvesting Process"
-        }
-      },
-      "location": {
-        "component": {
-          "label": " Location of growing are"
-        }
-      }
-    },
-    "es-ES": {
-      "products": {
-        "component": {
-          "label": " Productos",
-          "placeholder": " Seleccionar"
-        }
-      },
-      "rsLabel1": {
-        "component": {
-          "text": " Selección de productos"
-        }
-      },
-      "dateHarvesting": {
-        "component": {
-          "label": " Fecha de cosecha"
-        }
-      },
-      "title": {
-        "component": {
-          "text": " Campos obligatorios de la FDA"
-        }
-      },
-      "header": {
-        "component": {
-          "content": " Proceso de cosecha"
-        }
-      },
-      "location": {
-        "component": {
-          "label": " Ubicación del área de cultivo"
-        }
-      }
-    }
-  },
-  "languages": [
-    {
-      "code": "en",
-      "dialect": "US",
-      "name": "English",
-      "description": "American English",
-      "bidi": "ltr"
+      ],
+      "defaultLanguage": "en-US"
     },
     {
-      "code": "es",
-      "dialect": "ES",
-      "name": "Español",
-      "description": "Spanish",
-      "bidi": "ltr"
+      "version": "1",
+      "form": {
+        "key": "Screen",
+        "type": "Screen",
+        "props": {}
+      },
+      "localization": {},
+      "languages": [
+        {
+          "code": "en",
+          "dialect": "US",
+          "name": "English",
+          "description": "American English",
+          "bidi": "ltr"
+        }
+      ],
+      "defaultLanguage": "en-US"
     }
-  ],
-  "defaultLanguage": "en-US"
+  ]
 }
